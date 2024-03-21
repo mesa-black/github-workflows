@@ -1,0 +1,10 @@
+includes:
+    - ./phpstan-baseline.neon
+
+parameters:
+    checkGenericClassInNonGenericObjectType: false
+    checkMissingIterableValueType: false
+    treatPhpDocTypesAsCertain: false
+    level: max
+    paths:
+        - src

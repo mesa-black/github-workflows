@@ -20,5 +20,11 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
 
+    App\Command\WorkflowDeleteCommand:
+        arguments:
+            $githubToken: '%env(GITHUB_TOKEN)%'
+            $githubOrganization: '%env(GITHUB_ORGANIZATION)%'
+            $githubRepository: '%env(GITHUB_REPOSITORY)%'
+
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones

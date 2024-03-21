@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+    php:
+        container_name: ${COMPOSE_PROJECT_NAME}_php
+        build: .
+        volumes:
+            - ./:/app
+
+    qa:
+       container_name: ${COMPOSE_PROJECT_NAME}_qa
+       image: alximy/php-qa-tools:1-alpine
+       environment:
+            WITH_COMPOSER_DEPS: 1
+            PHPSTAN_VERSION: '^1.11@dev'
+            PHP_VERSION: '8.3'
+       volumes:
+            - ./:/qa
+       working_dir: /qa
