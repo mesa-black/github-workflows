@@ -20,7 +20,7 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
 
-    App\Command\WorkflowDeleteCommand:
+    App\Service\WorkflowManagerManager:
         arguments:
             $githubToken: '%env(GITHUB_TOKEN)%'
             $githubOrganization: '%env(GITHUB_ORGANIZATION)%'
