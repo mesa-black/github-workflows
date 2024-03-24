@@ -9,7 +9,7 @@ use Symfony\Contracts\HttpClient\Exception\ServerExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
-final readonly class WorkflowManagerManager implements WorkflowManagerInterface
+final readonly class WorkflowManager implements WorkflowManagerInterface
 {
     private const GITHUB_API = 'https://api.github.com';
 
